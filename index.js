@@ -3,11 +3,11 @@
 // 🏡 Task 1: Variables
 /* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively. Create another value called name and give it the value of your own name.
 */
-// let principal = 200000;
-// let interestRate = 0.05;
+let principal = 200000;
+let interestRate = 0.05;
 // let insterestRate = 0.05025;
-// let years = 30;
-// const name = 'Shanon';
+let years = 30;
+const name = 'Shanon';
 
 // console.log(principal);
 // console.log(insterestRate);
@@ -23,8 +23,8 @@ Create a variable called `monthlyInterestRate` and give it the value of interest
 Create another variable called `periods` and give it the value of years*12.
 */
 
-// let monthlyInterestRate = interestRate/12;
-// let periods = years*12;
+let monthlyInterestRate = interestRate/12;
+let periods = years*12;
 
 // console.log(monthlyInterestRate);
 // console.log(peridos);
@@ -39,11 +39,11 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 When your math is correct, monthlyRate will equal 1073.64
 */
 
-// let power = (Math.pow((1 + monthlyInterestRate),periods));
+let power = (Math.pow((1 + monthlyInterestRate),periods));
 // // let topDivision = (monthlyInterestRate*power);
 // // let bottomDivision = (power - 1);
-// let monthlyRateFull = (principal*((monthlyInterestRate*power)/(power - 1)));
-// let monthlyRate = monthlyRateFull.toFixed(2);
+let monthlyRateFull = (principal*((monthlyInterestRate*power)/(power - 1)));
+let monthlyRate = monthlyRateFull.toFixed(2);
 
 // console.log(power);
 // console.log(topDivision);
@@ -111,7 +111,7 @@ function mortgageCalculator(creditScore){
     }
 }
 
-console.log(mortgageCalculator(800));
+// console.log(mortgageCalculator(800));
 
 // 🏡 Task 6: Loops
 /* Write a new function called variableInterestRate. This function should be the same as mortgageCalculator, except it should console.log the monthly payment for 10 different interest rates at 0.5% increments plus or minus 2% from the inputted interest rate. Complete these calculations using a for loop.
@@ -130,7 +130,13 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 */
 
 
+function variableInterestRate(name, interestRate, monthlyRate){
+    for (i = 0; i < 5; i += 0.5){
+        console.log(name + ", with and interest rate of " + i + ", your monthly rate is $" + monthlyRate);
+    }
+}
 
+console.log(variableInterestRate(name, 0.04, monthlyRate))
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
 
